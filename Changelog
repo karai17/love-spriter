@@ -1,0 +1,6 @@
+
+v0.91
+	After Spriter B10 download, timelineID started getting exported as a string.
+	In lua "1" is a different index than 1, so I added logic to explicitly cast these ids to integers.
+
+

@@ -1,0 +1,20 @@
+id/references Note:
+This parser is adding 1 to all id/parent/etc values and references because of Lua 1 based tables
+From looking at the data, I am assuming that the ID in the data is a 1:1 mapping to C-style 0-indexed arrays
+The re-mapping is not 100% necessary, but in Lua it is a LOT easier for things to be 1-based.  It is not worth it to maintain 0-indexed arrays
+
+usage:
+local Spriter = require("libs/Spriter")
+--Animation filename assumed to be animationDirectory/animationDirectory.scon
+local spriterData = Spriter:loadSpriter("./", "animationDirectory")
+
+Note: loadSpriter is primary entry point to class.
+
+Video overview of library:
+http://www.hardcrawler.com/spriter-library/
+
+Spriter homepage:
+http://www.brashmonkey.com/spriter.htm
+
+Love2D homepage:
+http://http://www.love2d.org/ 
