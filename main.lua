@@ -94,8 +94,6 @@ function love.load()
 	--I am using canvases to support flipping spriter animations after rendering regularly.
 	--A more fancy-pants approach could be used to render the animations backwards, but this was easier
 	--If your video card doesn't support canvases and non-power-of-two canvases, this won't work.
-	assert(love.graphics.isSupported("canvas"), "This graphics card does not support canvases.")
-	assert(love.graphics.isSupported("npot"), "This graphics card does not support non power-of-two canvases.") 
 
 	 canvas = love.graphics.newCanvas(screenWidth, screenHeight)
 

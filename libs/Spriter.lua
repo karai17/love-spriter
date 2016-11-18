@@ -1343,7 +1343,6 @@ function Spriter:draw( x, y )
 	--Only possible to use sprite batch if we used texture packer structure - default is series of disparate images
 	if self.usingTexturePacker then
 		self.spriteBatch:clear()
-		self.spriteBatch:bind()
 	end
 
 	local frameData = self:getFrameData()
@@ -1399,7 +1398,6 @@ function Spriter:draw( x, y )
 
 	--Texturepacker rendering overhead
 	if self.usingTexturePacker then
-		self.spriteBatch:unbind()
 		love.graphics.draw(self.spriteBatch)
 	end
 
