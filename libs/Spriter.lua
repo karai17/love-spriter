@@ -1339,6 +1339,7 @@ end --drawDebugInfo
 
 function Spriter:draw( x, y )
 	local canvas = self:getCanvas()
+	local originalCanvas = love.graphics.getCanvas()
 
 	--Only possible to use sprite batch if we used texture packer structure - default is series of disparate images
 	if self.usingTexturePacker then
@@ -1408,7 +1409,7 @@ function Spriter:draw( x, y )
 	end
 
 	--Turn off canvas.  Graphics operations now apply to screen
-	love.graphics.setCanvas()
+	love.graphics.setCanvas(originalCanvas)
 
 	-- The rectangle from the Canvas was already alpha blended.
 	-- Use the premultiplied blend mode when drawing the Canvas itself to prevent another blending.
